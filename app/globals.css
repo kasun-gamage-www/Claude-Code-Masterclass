@@ -43,3 +43,17 @@ svg.logo {
 .form-title {
   @apply text-center text-xl font-bold;
 }
+
+/* calculator */
+.calculator {
+  @apply flex flex-col items-center gap-2 mt-6;
+}
+.calculator-row {
+  @apply flex gap-2;
+}
+.calculator-btn {
+  @apply w-16 h-16 rounded-lg text-xl font-semibold text-heading bg-lighter hover:bg-light transition-colors;
+}
+.calculator-btn--zero {
+  @apply w-[calc(8rem+0.5rem)];
+}
