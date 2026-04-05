@@ -3,15 +3,15 @@
 
 /* theme colours */
 @theme {
-  --color-primary: #C27AFF;
-  --color-secondary: #FB64B6;
-  --color-dark: #030712;
-  --color-light: #0A101D;
-  --color-lighter: #101828;
+  --color-primary: #1D7DC1;
+  --color-secondary: #6B9DC0;
+  --color-dark: #0D1B3E;
+  --color-light: #0B3A6E;
+  --color-lighter: #1565A0;
   --color-success: #05DF72;
   --color-error: #FF6467;
   --color-heading: white;
-  --color-body: #99A1AF;
+  --color-body: #B8D3E0;
   --font-sans: 'Inter', sans-serif;
 }
 
@@ -52,7 +52,32 @@ svg.logo {
   @apply flex gap-2;
 }
 .calculator-btn {
-  @apply w-16 h-16 rounded-lg text-xl font-semibold text-heading bg-lighter hover:bg-light transition-colors;
+  @apply w-16 h-16 rounded-xl text-xl font-semibold text-heading;
+  background: linear-gradient(to bottom, #2589d8 0%, #1565A0 55%, #0e4a7a 100%);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: transform 80ms ease, box-shadow 80ms ease, filter 80ms ease;
+}
+.calculator-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 50%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+.calculator-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+  filter: brightness(0.88);
 }
 .calculator-btn--zero {
   @apply w-[calc(8rem+0.5rem)];
