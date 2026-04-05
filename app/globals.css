@@ -18,6 +18,10 @@
 /* typography */
 body {
  @apply font-sans text-body bg-dark;
+ background-image: url('https://cdn.mos.cms.futurecdn.net/FRdq8ZbPetwNDRV9R3hYpP-970-80.jpg.webp');
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
 }
 h1, h2, h3, h4 {
   @apply text-heading;
